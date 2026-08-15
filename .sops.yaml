@@ -2,4 +2,4 @@ creation_rules:
   - path_regex: \.secret\.yaml$ # Files ending with .secret.yaml
     encrypted_regex: '^(data|stringData)$' # Encrypt only data or stringData field
     age: >-
-      age1guvkjxc9cp2593z67tzs8dtr4ss2wncertclj0cvuzarg8gj6d4svw8pzd,
+      age1qrj8nkk5wvtsp5j6efhhmru2vdshkyyq8fmllrp3enz23pny43cq8zvt06,
