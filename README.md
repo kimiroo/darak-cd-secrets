@@ -58,3 +58,27 @@ sops decrypt --in-place file.yaml
 # Or
 sops -d -i file.yaml
 ```
+
+### Rotate
+1. Generate a new key pair
+```bash
+age-keygen -o ~/.config/sops/age/keys.txt
+```
+
+2. Update `.sops.yaml`<br>
+   Replace the old public key with the newly generated one.
+
+3. Set the key file path<br>
+   Ensure `SOPS_AGE_KEY_FILE` points to a `keys.txt` containing both the old and new private keys
+```bash
+export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
+```
+
+4. Rotate keys (Re-encrypt files)
+```bash
+# Rotate a single file
+sops --rotate -i target.secret.yaml
+
+# Rotate all YAML files recursively
+find . -type f -name "*.yaml" -exec sops --rotate -i {} \;
+```
