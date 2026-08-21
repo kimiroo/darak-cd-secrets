@@ -1,6 +1,13 @@
 # darak-cd-secrets
 Darak K3s CD/CI secrets managed with SOPS
 
+## Pre-commit
+```bash
+pip install pre-commit
+pre-commit install
+pre-commit run --all-files # To scan through all existing files
+```
+
 ## age
 
 ### Create & import age key
