@@ -1,5 +1,5 @@
-# ichika-cd-secrets
-Ichika K3s CD/CI secrets managed with SOPS
+# darak-cd-secrets
+Darak K3s CD/CI secrets managed with SOPS
 
 ## age
 
