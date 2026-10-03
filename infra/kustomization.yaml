@@ -6,3 +6,4 @@ resources:
   - cert-manager
   - step-ca
   - step-issuer
+  - cloudflare-ddns
