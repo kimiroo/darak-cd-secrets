@@ -4,6 +4,7 @@ resources:
   - alertmanager
   - authentik
   - cert-manager
+  - freeradius
   - step-ca
   - step-issuer
   - cloudflare-ddns

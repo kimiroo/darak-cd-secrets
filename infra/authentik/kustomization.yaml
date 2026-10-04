@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
   - authentik.secret.yaml
   - cnpg.secret.yaml
+  - wifi-owner.secret.yaml
+  - wifi-radius.secret.yaml
