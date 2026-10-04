@@ -6,5 +6,7 @@ resources:
   - cert-manager
   - freeradius
   - step-ca
+  - step-ca-wifi
   - step-issuer
+  - wifi-db
   - cloudflare-ddns

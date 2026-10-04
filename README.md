@@ -1,6 +1,13 @@
 # darak-cd-secrets
 Darak K3s CD/CI secrets managed with SOPS
 
+## Secrets that need attention (values must match, order matters)
+Each directory has a `README.md` with the details. Files marked PLACEHOLDER are unencrypted: encrypt before committing.
+- `infra/wifi-db/`: `wifi-owner`, `wifi-radius` (password = `freeradius-db`)
+- `infra/step-ca-wifi/`: `intermediate-wifi` (from the same `regen-all.sh` run as the certificates in darak-cd)
+- `infra/authentik/`: `authentik-ldap-wifi-cert`, `authentik-ldap-wifi-search` (token = `freeradius-ldap-wifi`)
+- `infra/freeradius/`: `freeradius-db`, `freeradius-ldap-wifi`, `authentik-ldap-wifi-outpost` (token issued by authentik after the blueprint ran)
+
 ## Pre-commit
 ```bash
 pip install pre-commit

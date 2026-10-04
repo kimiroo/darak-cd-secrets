@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - authentik-ldap-wifi-cert.secret.yaml
+  - authentik-ldap-wifi-search.secret.yaml
   - authentik.secret.yaml
   - cnpg.secret.yaml
-  - wifi-owner.secret.yaml
-  - wifi-radius.secret.yaml
